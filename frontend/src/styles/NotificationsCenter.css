@@ -1,0 +1,136 @@
+.notifications-center {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-right: 5px solid #ff6b6b;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.1);
+}
+
+.notifications-center h2 {
+    color: #c92a2a;
+    margin: 0 0 15px 0;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.notifications-center.good {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dbeafe 100%);
+    border-right-color: #34c759;
+}
+
+.notifications-center.good h2 {
+    display: none;
+}
+
+.alerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notification-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 12px 15px;
+    background: white;
+    border-radius: 8px;
+    border-right: 4px solid #ff6b6b;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    direction: rtl;
+}
+
+.notification-item.alert-urgent {
+    background: linear-gradient(135deg, #ffe0e0 0%, #ffcccc 100%);
+    border-right-color: #ff1744;
+}
+
+.notification-item.alert-critical {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-right-color: #ff9100;
+}
+
+.notification-item.alert-warning {
+    background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+    border-right-color: #ffd600;
+}
+
+.notification-item.good {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dbeafe 100%);
+    border-right-color: #34c759;
+}
+
+.notification-item .emoji {
+    font-size: 1.5em;
+    flex-shrink: 0;
+    min-width: 40px;
+    text-align: center;
+}
+
+.notification-item .content {
+    flex: 1;
+    text-align: right;
+}
+
+.notification-item h3 {
+    margin: 0 0 4px 0;
+    color: #333;
+    font-size: 0.95em;
+    font-weight: 700;
+}
+
+.notification-item p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.days-indicator {
+    margin-top: 6px;
+}
+
+.days {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: white;
+}
+
+.days-urgent {
+    background-color: #ff1744;
+}
+
+.days-critical {
+    background-color: #ff9100;
+}
+
+.days-warning {
+    background-color: #ffd600;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .notifications-center {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .notification-item {
+        padding: 10px 12px;
+        gap: 12px;
+    }
+
+    .notification-item h3 {
+        font-size: 0.9em;
+    }
+
+    .notification-item p {
+        font-size: 0.85em;
+    }
+}

@@ -1,0 +1,152 @@
+.reminders-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reminders-container h2 {
+    color: #333;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.no-reminders {
+    text-align: center;
+    padding: 30px 20px;
+    color: #4CAF50;
+}
+
+.no-reminders p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.no-reminders .hint {
+    font-size: 14px;
+    color: #999;
+}
+
+.reminders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reminder-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    border-right: 4px solid;
+    transition: all 0.3s;
+}
+
+.reminder-soon {
+    background: #FFF3E0;
+    border-right-color: #FF9800;
+}
+
+.reminder-urgent {
+    background: #FFEBEE;
+    border-right-color: #F44336;
+}
+
+.reminder-item:hover {
+    transform: translateX(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.reminder-icon {
+    font-size: 24px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.reminder-content {
+    flex: 1;
+}
+
+.reminder-title {
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.reminder-value {
+    color: #666;
+    font-size: 14px;
+}
+
+.reminder-value strong {
+    color: #F44336;
+    font-weight: 700;
+}
+
+.reminder-badge {
+    font-size: 20px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.reminder-badge.soon {
+    background: #FFE0B2;
+}
+
+.reminder-badge.urgent {
+    background: #EF5350;
+    animation: pulse 2s infinite;
+}
+
+.expired-text {
+    color: #D32F2F;
+    font-weight: 700;
+}
+
+.reminder-date {
+    color: #999;
+    font-size: 12px;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .reminders-container {
+        padding: 16px;
+    }
+
+    .reminder-item {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .reminder-title {
+        font-size: 14px;
+    }
+
+    .reminder-value {
+        font-size: 12px;
+    }
+
+    .reminder-icon {
+        font-size: 20px;
+    }
+}
